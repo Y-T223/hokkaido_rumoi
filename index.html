@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>留萌市海のふるさと館｜黄金岬の高台に立つ、留萌の歴史と夕陽の資料館</title>
+<meta name="description" content="北海道留萌市・黄金岬の高台にある留萌市海のふるさと館。ニシン漁の道具、古代の化石、アイヌ文化資料、操縦シミュレーター「るもい号」、日本海に沈む夕陽の眺望。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#10202b; --deep2:#183142; --paper:#e6e9e4; --ink:#1c2a33;
+  --brass:#b8934a; --brass-d:#8a6c2f; --dusk:#9c4a3a; --mute:#6c7b84;
+  --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.95;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.5}
+.sec{padding:96px 0}
+.dark{background:var(--deep);color:#e9e6dc}
+.sec h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:.14em;margin-bottom:12px}
+.rule{width:64px;height:2px;background:var(--brass);margin:0 0 40px;border:0;position:relative}
+.rule::after{content:"";position:absolute;left:72px;top:0;width:8px;height:2px;background:var(--brass)}
+.lead{max-width:40em}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--deep) url(images/01.jpg) center/cover no-repeat;color:#f3efe3;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,20,28,.88) 0%,rgba(10,20,28,.55) 55%,rgba(40,20,15,.35) 100%)}
+.hero .wrap{position:relative;width:100%;display:flex;justify-content:space-between;align-items:center;gap:32px;padding-top:56px;padding-bottom:56px}
+.hero-v{writing-mode:vertical-rl;font-family:var(--serif);font-weight:800;font-size:clamp(2.6rem,7.5vw,5.6rem);letter-spacing:.28em;line-height:1.3;border-right:1px solid var(--brass);padding-right:28px}
+.hero-txt{max-width:420px}
+.hero-txt p{font-size:1.02rem;margin-bottom:28px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero-sub{font-family:var(--serif);color:var(--brass);letter-spacing:.3em;font-size:.95rem;margin-bottom:16px}
+.btn{display:inline-block;text-decoration:none;font-family:var(--serif);font-weight:600;letter-spacing:.16em;padding:15px 34px;border:1px solid var(--brass);background:var(--brass);color:#14202a;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--brass)}
+.btn.line{background:transparent;color:var(--brass)}
+.btn.line:hover{background:var(--brass);color:#14202a}
+.dark .btn.line{color:var(--brass)}
+.paper .btn.line{color:var(--brass-d);border-color:var(--brass-d)}
+.paper .btn.line:hover{background:var(--brass-d);color:#fff}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.frame{position:relative;padding:14px;border:1px solid var(--brass-d);background:#f3f1ea}
+.frame img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#cfd6d2;filter:sepia(.18) saturate(.9)}
+.cap{font-size:.8rem;color:var(--mute);margin-top:8px;letter-spacing:.08em}
+.facts{list-style:none;margin-top:28px;border-top:1px solid #b9c0bb}
+.facts li{padding:14px 0;border-bottom:1px solid #b9c0bb}
+.facts b{font-family:var(--serif);color:var(--brass-d);display:block;letter-spacing:.1em}
+
+/* strengths */
+.strong{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.strong div{border-left:2px solid var(--brass);padding-left:24px}
+.strong h3{font-size:1.25rem;margin-bottom:10px;color:#f0e6cc}
+
+/* view */
+.view{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.view .frame{order:2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;list-style:none}
+.tags li{border:1px solid var(--brass-d);padding:2px 14px;font-size:.88rem;color:var(--brass-d);font-family:var(--serif)}
+
+/* reviews */
+.rev{display:grid;gap:32px}
+.rev blockquote{background:rgba(255,255,255,.05);border:1px solid rgba(184,147,74,.5);padding:36px 36px 30px;position:relative}
+.rev blockquote::before{content:"“";font-family:var(--serif);font-size:4rem;color:var(--brass);position:absolute;left:18px;top:-6px;line-height:1}
+.stars{color:var(--brass);letter-spacing:.2em;font-size:1.1rem;margin-bottom:10px}
+.stars span{color:rgba(255,255,255,.25)}
+.rev p{font-size:.97rem}
+.rev p+p{margin-top:.8em}
+
+/* info */
+table{width:100%;border-collapse:collapse;background:#f3f1ea;border:1px solid #b9c0bb}
+th,td{text-align:left;padding:16px 20px;border-bottom:1px solid #cdd3cf;vertical-align:top}
+th{width:9em;font-family:var(--serif);color:var(--brass-d);font-weight:600;letter-spacing:.1em;background:#ebeae2}
+td a{color:var(--deep2);word-break:break-all}
+
+/* map */
+.map{margin-top:48px}
+.map iframe{width:100%;height:420px;border:0;display:block;border:1px solid var(--brass-d);filter:sepia(.25) saturate(.85)}
+.map-btn{text-align:center;margin-top:20px}
+
+footer{background:#0b161e;color:#c9cdc6;text-align:center;padding:48px 24px;font-size:.9rem}
+footer .name{font-family:var(--serif);font-size:1.2rem;letter-spacing:.2em;color:#f0e6cc;margin-bottom:16px}
+.sns{display:flex;justify-content:center;gap:14px;margin:18px 0}
+.sns a{width:44px;height:44px;border:1px solid var(--brass);border-radius:50%;display:grid;place-items:center;color:var(--brass);transition:background .2s,color .2s}
+.sns a:hover{background:var(--brass);color:#14202a}
+.sns svg{width:18px;height:18px;fill:currentColor}
+
+@media(max-width:760px){
+  .sec{padding:68px 0}
+  .hero .wrap{flex-direction:column;align-items:flex-start;justify-content:flex-end}
+  .hero-v{font-size:2.8rem;padding-right:18px}
+  .about,.view,.strong{grid-template-columns:1fr;gap:32px}
+  .view .frame{order:0}
+  th,td{display:block;width:100%}
+  th{border-bottom:0;padding-bottom:4px}
+  .map iframe{height:320px}
+  .rev blockquote{padding:34px 22px 24px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="hero-v">海のふるさと館</h1>
+    <div class="hero-txt">
+      <p class="hero-sub">留萌市・黄金岬</p>
+      <p>地球の誕生から、ニシンで栄えた港まち留萌へ。<br>岬の高台から、日本海に沈む夕陽を望む資料館です。</p>
+      <a class="btn" href="#access">アクセスを見る</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec paper" id="about">
+  <div class="wrap about">
+    <div>
+      <h2>留萌の歴史を、ひとつの館で</h2>
+      <hr class="rule">
+      <p class="lead">留萌市海のふるさと館は、地域の歴史や文化資源を保存・展示することを目的に、留萌市が主体となって1989年に開設しました。</p>
+      <ul class="facts">
+        <li><b>1989年開設</b>留萌市が主体となり、地域の歴史と文化資源を守り伝えるために誕生。</li>
+        <li><b>黄金岬の高台</b>日本海と留萌港を見渡す景勝地に立っています。</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="frame"><img src="images/02.jpg" alt="留萌市海のふるさと館の展示" loading="lazy"></div>
+    </figure>
+  </div>
+</section>
+
+<section class="sec dark" id="strength">
+  <div class="wrap">
+    <h2>所蔵資料と体験展示</h2>
+    <hr class="rule">
+    <div class="strong">
+      <div>
+        <h3>ここにしかない、地域の資料</h3>
+        <p>ニシン漁の道具や古代の化石、アイヌ文化資料など、留萌ならではの貴重な資料を所蔵しています。</p>
+      </div>
+      <div>
+        <h3>子どもから大人まで楽しめる</h3>
+        <p>操縦シミュレーター「るもい号」をはじめ、体験型の展示も充実しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="view">
+  <div class="wrap view">
+    <div>
+      <h2>岬の高台から望む絶景</h2>
+      <hr class="rule">
+      <p class="lead">黄金岬の高台に位置し、日本海や留萌港、南に暑寒別連峰、北に天売・焼尻島を一望できる景勝地にあります。展望ラウンジ・テラスからの眺めは、この館いちばんの見どころです。</p>
+      <ul class="tags">
+        <li>日本海</li><li>留萌港</li><li>暑寒別連峰</li><li>天売・焼尻島</li>
+      </ul>
+    </div>
+    <figure>
+      <div class="frame"><img src="images/03.jpg" alt="展望ラウンジから望む日本海と夕陽" loading="lazy"></div>
+    </figure>
+  </div>
+</section>
+
+<section class="sec dark" id="voice">
+  <div class="wrap">
+    <h2>訪れた方の声</h2>
+    <hr class="rule">
+    <div class="rev">
+      <blockquote>
+        <div class="stars">★★★★<span>★</span></div>
+        <p>留萌市大町の黄金岬にある資料館。</p>
+        <p>留萌の歴史を地球誕生から先史時代などから学べます。珍しい物だと発掘された平安時代の鎧兜が展示されています。蝦夷まで落ち延びた武士が持っていたもの、アイヌが交易で手に入れたものなど言われており歴史のロマンが伝わる遺産です。留萌ではアンモナイトなどの化石が発掘されていることも初めて知りました。そして留萌といえばやはりニシン漁。全盛期に使われていた猟具や漁船を作るための船大工道具など留萌発展の歴史を垣間見れます。「ゴールデンカムイ」で辺見ちゃんが使っていた玉切り包丁もありました。子供が楽しめる体験コーナーも色々あります。留萌港を船でまわるるもい号シミュレーターを遊びましたが難しすぎてクリア出来る気がしません（笑）</p>
+        <p>以前はレストランも営業していましたが現在は閉業中。至る所で老朽化が目立ちますが無料で見られるのは助かりますし地元の方が地元の歴史を学ぶ場所としても残していってほしいです。日本海に沈む夕陽が見られる展望フロアやメッセージノートもあり観光としても楽しめます。</p>
+      </blockquote>
+      <blockquote>
+        <div class="stars">★★★★★</div>
+        <p>黄金岬の上（高台にある施設）。黄金岬から遊歩道を登ること2分程度で行ける。黄金岬から車でも上がれる道がすぐ近くにある。</p>
+        <p>黄金岬より少しだけ高い目線で綺麗な夕陽が見られる場所。無料で停められる駐車場もあり、車の中から夕陽を眺めることもできる夕方の絶景ポイント。</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="access">
+  <div class="wrap">
+    <h2>施設案内・アクセス</h2>
+    <hr class="rule">
+    <table>
+      <tr><th>施設名</th><td>留萌市海のふるさと館</td></tr>
+      <tr><th>住所</th><td>北海道留萌市大町2丁目3-1</td></tr>
+      <tr><th>電話番号</th><td><a href="tel:0164436677">0164-43-6677</a></td></tr>
+      <tr><th>定休日</th><td>月曜日</td></tr>
+      <tr><th>公式サイト</th><td><a href="https://www.rumoi-rasisa.jp/web/rumoimeguri/umino-furusatokan/" target="_blank" rel="noopener">https://www.rumoi-rasisa.jp/web/rumoimeguri/umino-furusatokan/</a></td></tr>
+      <tr><th>お問い合わせ</th><td><a href="https://www.rumoi-rasisa.jp/web/inquiry/" target="_blank" rel="noopener">お問い合わせフォーム</a></td></tr>
+    </table>
+
+    <div class="map">
+      <iframe title="留萌市海のふるさと館の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=北海道留萌市大町2丁目3-1 留萌市海のふるさと館&amp;output=embed&amp;hl=ja"></iframe>
+      <div class="map-btn">
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=北海道留萌市大町2丁目3-1 留萌市海のふるさと館" target="_blank" rel="noopener">Googleマップで開く</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="name">留萌市海のふるさと館</div>
+  <p>北海道留萌市大町2丁目3-1／0164-43-6677</p>
+  <p><small>※掲載内容は変更になる場合があります。ご来館前に公式サイトをご確認ください。</small></p>
+</footer>
+
+</body>
+</html>
